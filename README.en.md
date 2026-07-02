@@ -1,8 +1,8 @@
-# Molio Web Clipper
+# Molio-Connect
 
 > [中文](README.md) | **English**
 
-Molio Web Clipper is the official browser extension for [Molio](https://molio.cn/) — a companion tool that saves web content to your Molio knowledge base with a single click.
+Molio-Connect is the official browser extension for [Molio](https://molio.cn/) — a companion tool that saves web content to your Molio knowledge base with a single click.
 
 ## Installation
 
@@ -65,4 +65,4 @@ Build outputs:
 
 ## License
 
-Source code is open source under the MIT License, originally from [obsidian-clipper](https://github.com/obsidianmd/obsidian-clipper). All Obsidian-related trademarks, icons, and marketing assets remain the property of Obsidian.
+This project is a fork of [obsidian-clipper](https://github.com/obsidianmd/obsidian-clipper), with the original code licensed under MIT. All Obsidian trademarks, icons, and brand assets have been removed in this fork. Molio trademarks and brand assets are owned by zhuzhaoyun.

@@ -1,8 +1,8 @@
-# Molio Web Clipper
+# Molio-Connect
 
 > **中文** | [English](README.en.md)
 
-Molio Web Clipper 是 [Molio](https://molio.cn/) 的官方浏览器扩展，用于把网页内容一键保存到 Molio 知识库。
+Molio-Connect 是 [Molio](https://molio.cn/) 的官方浏览器扩展，用于把网页内容一键保存到 Molio 知识库。
 
 ## 安装
 
@@ -65,4 +65,4 @@ npm test             # 运行测试
 
 ## 许可证
 
-源代码基于 [obsidian-clipper](https://github.com/obsidianmd/obsidian-clipper) 在 MIT 协议下开放。所有 Obsidian 相关的商标、图标、营销素材仍归 Obsidian 所有。
+本项目是 [obsidian-clipper](https://github.com/obsidianmd/obsidian-clipper) 的 fork，原始代码基于 MIT 协议开源。所有 Obsidian 商标、图标及相关品牌资产已在 fork 中移除，Molio 相关商标及品牌资产归 zhuzhaoyun 所有。
