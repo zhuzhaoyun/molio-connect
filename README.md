@@ -1,109 +1,141 @@
-Obsidian Web Clipper helps you highlight and capture the web in your favorite browser. Anything you save is stored as durable Markdown files that you can read offline, and preserve for the long term.
+# Molio Web Clipper
 
-- **[Download Web Clipper](https://obsidian.md/clipper)**
-- **[Documentation](https://help.obsidian.md/web-clipper)**
-- **[Troubleshooting](https://help.obsidian.md/web-clipper/troubleshoot)**
+> **中文** | [English](#english)
 
-## Get started
+Molio Web Clipper 是 [Molio](https://molio.app) 的官方浏览器扩展，用于把网页内容一键保存到 Molio 知识库。
 
-Install the extension by downloading it from the official directory for your browser:
+## 安装
 
-- **[Chrome Web Store](https://chromewebstore.google.com/detail/obsidian-web-clipper/cnjifjpddelmedmihgijeibhnjfabmlf)** for Chrome, Brave, Arc, Orion, and other Chromium-based browsers.
-- **[Firefox Add-Ons](https://addons.mozilla.org/en-US/firefox/addon/web-clipper-obsidian/)** for Firefox and Firefox Mobile.
-- **[Safari Extensions](https://apps.apple.com/us/app/obsidian-web-clipper/id6720708363)** for macOS, iOS, and iPadOS.
-- **[Edge Add-Ons](https://microsoftedge.microsoft.com/addons/detail/obsidian-web-clipper/eigdjhmgnaaeaonimdklocfekkaanfme)** for Microsoft Edge.
+👉 [Chrome Web Store 安装](https://chromewebstore.google.com/detail/molio/pjdacbbkjpegfkogoieejajljplngbik?hl=zh-CN&utm_source=ext_sidebar)
 
-## Use the extension
+## 主要功能
 
-Documentation is available on the [Obsidian Help site](https://help.obsidian.md/web-clipper), which covers how to use [highlighting](https://help.obsidian.md/web-clipper/highlight), [templates](https://help.obsidian.md/web-clipper/templates), [variables](https://help.obsidian.md/web-clipper/variables), [filters](https://help.obsidian.md/web-clipper/filters), and more.
+- **一键保存网页**：在任意网页使用快捷键或点击图标，即可把页面内容保存为 Markdown 进入 Molio 知识库
+- **高亮标注**：选中文字即可高亮，保存后自动同步到 Molio
+- **自定义模板**：支持模板、变量与过滤器，灵活控制保存内容与格式
+- **阅读器**：自动提取文章正文，获得干净阅读体验
+- **零配置**：扩展启动后自动连接本地 Molio daemon，默认保存到当前打开的知识库；无需手动设置 vault
 
-## Contribute
+## 工作原理
 
-### Translations
+扩展通过本地 daemon（默认 `http://localhost:3100`）与 Molio 桌面端通信。当你点击保存时，内容会直接写入 Molio 当前激活的知识库中，同时触发 Molio 桌面端打开该文件。
 
-You can help translate Web Clipper into your language. Submit your translation via pull request using the format found in the [/_locales](/src/_locales) folder.
+需要确保 Molio 桌面端正在运行。
 
-### Features and bug fixes
+## 致谢
 
-See the [help wanted](https://github.com/obsidianmd/obsidian-clipper/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) tag for issues where contributions are welcome.
+本项目基于 [obsidian-clipper](https://github.com/obsidianmd/obsidian-clipper) 开发。感谢 Obsidian 团队开放这套优秀的网页采集方案，并在 MIT 协议下共享源码。
 
-## Roadmap
+我们重用了 defuddle 内容提取引擎、模板系统、高亮功能与多语言翻译等成熟组件，在其基础上将保存目标适配为 Molio 知识库。
 
-In no particular order:
+## 开发
 
-- [ ] Annotate highlights
-- [ ] Template directory
-- [ ] Sync settings across browsers
-- [x] A separate icon for Web Clipper (1.6.3)
-- [x] Template validation (1.1.0)
-- [x] Template logic (if/for)  (1.1.0)
-- [x] Save images locally ([Obsidian 1.8.0](https://obsidian.md/changelog/2024-12-18-desktop-v1.8.0/))
-- [x] Translate UI into more languages — help is welcomed
-
-## Developers
-
-To build the extension:
-
-```
-npm run build
+```bash
+npm install
+npm run build        # 构建三个浏览器版本（Chrome / Firefox / Safari）
+npm run build:chrome # 仅构建 Chrome 版本
+npm test             # 运行测试
 ```
 
-This will create three directories:
-- `dist/` for the Chromium version
-- `dist_firefox/` for the Firefox version
-- `dist_safari/` for the Safari version
+构建产物：
+- `dist/` — Chrome 版本
+- `dist_firefox/` — Firefox 版本
+- `dist_safari/` — Safari 版本
 
-### Install the extension locally
+### 本地安装
 
-For Chromium browsers, such as Chrome, Brave, Edge, and Arc:
+**Chromium 系浏览器**（Chrome、Brave、Edge、Arc）：
+1. 浏览器打开 `chrome://extensions`
+2. 开启 **开发者模式**
+3. 点击 **加载已解压的扩展程序**，选择 `dist` 目录
 
-1. Open your browser and navigate to `chrome://extensions`
+**Firefox**：
+1. 打开 `about:debugging#/runtime/this-firefox`
+2. 点击 **临时加载附加组件**
+3. 选择 `dist_firefox` 目录下的 `manifest.json`
+
+## 第三方依赖
+
+- [webextension-polyfill](https://github.com/mozilla/webextension-polyfill) — 跨浏览器 API 兼容
+- [defuddle](https://github.com/kepano/defuddle) — 内容提取与 Markdown 转换
+- [dayjs](https://github.com/iamkun/dayjs) — 日期处理
+- [lz-string](https://github.com/pieroxy/lz-string) — 模板压缩
+- [lucide](https://github.com/lucide-icons/lucide) — 图标
+- [dompurify](https://github.com/cure53/DOMPurify) — HTML 清洗
+
+## 许可证
+
+源代码基于 [obsidian-clipper](https://github.com/obsidianmd/obsidian-clipper) 在 MIT 协议下开放。所有 Obsidian 相关的商标、图标、营销素材仍归 Obsidian 所有。
+
+---
+
+<a id="english"></a>
+
+# Molio Web Clipper (English)
+
+> [中文](#molio-web-clipper) | **English**
+
+Molio Web Clipper is the official browser extension for [Molio](https://molio.app) — a companion tool that saves web content to your Molio knowledge base with a single click.
+
+## Installation
+
+👉 [Install from Chrome Web Store](https://chromewebstore.google.com/detail/molio/pjdacbbkjpegfkogoieejajljplngbik)
+
+## Features
+
+- **One-click web clipping**: Save any web page as Markdown into your Molio knowledge base via shortcut or toolbar icon
+- **Highlight & annotate**: Select text to highlight; highlights sync to Molio automatically
+- **Custom templates**: Fine-tune saved content and format with templates, variables, and filters
+- **Reader view**: Distilled article extraction for distraction-free reading
+- **Zero configuration**: Automatically connects to the local Molio daemon and saves to your currently active vault — no manual setup required
+
+## How it works
+
+The extension communicates with the Molio desktop app through the local daemon (default `http://localhost:3100`). When you save, the clip is written directly to Molio's active knowledge base, and the Molio desktop app opens the file automatically.
+
+Make sure the Molio desktop app is running.
+
+## Credits
+
+This project is built on top of [obsidian-clipper](https://github.com/obsidianmd/obsidian-clipper). Many thanks to the Obsidian team for sharing this excellent web clipping solution under the MIT License.
+
+We reuse its defuddle content extraction engine, template system, highlighting feature, and i18n translations — adapting the save target to Molio's knowledge base.
+
+## Development
+
+```bash
+npm install
+npm run build        # Build for all three browsers (Chrome / Firefox / Safari)
+npm run build:chrome # Chrome only
+npm test             # Run tests
+```
+
+Build outputs:
+- `dist/` — Chrome
+- `dist_firefox/` — Firefox
+- `dist_safari/` — Safari
+
+### Local install
+
+**Chromium browsers** (Chrome, Brave, Edge, Arc):
+1. Open `chrome://extensions`
 2. Enable **Developer mode**
-3. Click **Load unpacked** and select the `dist` directory
+3. Click **Load unpacked**, select the `dist` directory
 
-For Firefox:
-
-1. Open Firefox and navigate to `about:debugging#/runtime/this-firefox`
+**Firefox**:
+1. Open `about:debugging#/runtime/this-firefox`
 2. Click **Load Temporary Add-on**
-3. Navigate to the `dist_firefox` directory and select the `manifest.json` file
-
-If you want to run the extension permanently you can do so with the Nightly or Developer versions of Firefox.
-
-1. Type `about:config` in the URL bar
-2. In the Search box type `xpinstall.signatures.required`
-3. Double-click the preference, or right-click and select "Toggle", to set it to `false`.
-4. Go to `about:addons` > gear icon > **Install Add-on From File…**
-
-For iOS Simulator testing on macOS:
-
-1. Run `npm run build` to build the extension
-2. Open `xcode/Obsidian Web Clipper/Obsidian Web Clipper.xcodeproj` in Xcode
-3. Select the **Obsidian Web Clipper (iOS)** scheme from the scheme selector
-4. Choose an iOS Simulator device and click **Run** to build and launch the app
-5. Once the app is running on the simulator, open **Safari**
-6. Navigate to a webpage and tap the **Extensions** button in Safari to access the Web Clipper extension
-
-### Run tests
-
-```
-npm test
-```
-
-Or run in watch mode during development:
-
-```
-npm run test:watch
-```
+3. Select `manifest.json` from the `dist_firefox` directory
 
 ## Third-party libraries
 
-- [webextension-polyfill](https://github.com/mozilla/webextension-polyfill) for browser compatibility
-- [defuddle](https://github.com/kepano/defuddle) for content extraction and Markdown conversion
-- [dayjs](https://github.com/iamkun/dayjs) for date parsing and formatting
-- [lz-string](https://github.com/pieroxy/lz-string) to compress templates to reduce storage space
-- [lucide](https://github.com/lucide-icons/lucide) for icons
-- [dompurify](https://github.com/cure53/DOMPurify) for sanitizing HTML
+- [webextension-polyfill](https://github.com/mozilla/webextension-polyfill) — cross-browser API compatibility
+- [defuddle](https://github.com/kepano/defuddle) — content extraction & Markdown conversion
+- [dayjs](https://github.com/iamkun/dayjs) — date parsing
+- [lz-string](https://github.com/pieroxy/lz-string) — template compression
+- [lucide](https://github.com/lucide-icons/lucide) — icons
+- [dompurify](https://github.com/cure53/DOMPurify) — HTML sanitization
 
 ## License
 
-Obsidian Web Clipper source code is open source under the MIT License. All trademarks, icons, marketing copy, and other marketing assets are excluded from that license.
+Source code is open source under the MIT License, originally from [obsidian-clipper](https://github.com/obsidianmd/obsidian-clipper). All Obsidian-related trademarks, icons, and marketing assets remain the property of Obsidian.
