@@ -18,7 +18,7 @@
 		"message": "Lägg till leverantör"
 	},
 	"addToObsidian": {
-		"message": "Lägg till i Obsidian"
+		"message": "Lägg till i Molio"
 	},
 	"addVaultPlaceholder": {
 		"message": "Tryck på retur för att lägga till ett valv"
@@ -45,7 +45,7 @@
 		"message": "Ingen API-nyckel"
 	},
 	"apiKeysWarning": {
-		"message": "Genom att använda en extern leverantör godkänner du deras villkor och sekretesspolicy. Tolkningsförfrågningar skickas direkt till leverantören du väljer. Obsidian samlar inte in eller lagrar någon data om dina förfrågningar."
+		"message": "Genom att använda en extern leverantör godkänner du deras villkor och sekretesspolicy. Tolkningsförfrågningar skickas direkt till leverantören du väljer. Molio samlar inte in eller lagrar någon data om dina förfrågningar."
 	},
 	"appendToDaily": {
 		"message": "Lägg till i daglig anteckning, i slutet"
@@ -96,7 +96,7 @@
 		"message": "Klippbeteende"
 	},
 	"clipBehaviorDescription": {
-		"message": "Välj hur markerat innehåll sparas till Obsidian. Definierar variabeln $strong_start${{content}}$strong_end$.",
+		"message": "Välj hur markerat innehåll sparas till Molio. Definierar variabeln $strong_start${{content}}$strong_end$.",
 		"placeholders": {
 			"strong_end": {
 				"content": "</strong>"
@@ -107,7 +107,7 @@
 		}
 	},
 	"clipboardError": {
-		"message": "Obsidian kan inte komma åt ditt urklipp. Prova felsökningsinstruktionerna här: $1",
+		"message": "Molio kan inte komma åt ditt urklipp. Prova felsökningsinstruktionerna här: $1",
 		"placeholders": {
 			"1": {
 				"content": "$1"
@@ -118,7 +118,7 @@
 		"message": "Stäng"
 	},
 	"commandOpenClipper": {
-		"message": "Öppna Obsidian Clipper"
+		"message": "Öppna Molio Clipper"
 	},
 	"commandQuickClip": {
 		"message": "Snabbklipp"
@@ -196,7 +196,7 @@
 		"message": "Duplicera"
 	},
 	"earlyAccessDescription": {
-		"message": "Använd funktioner som kräver den senaste $link_start$early access-versionen$link_end$ av Obsidian. Kräver för närvarande Obsidian 1.7.2 eller senare.",
+		"message": "Använd funktioner som kräver den senaste $link_start$early access-versionen$link_end$ av Molio. Kräver för närvarande Molio 1.7.2 eller senare.",
 		"placeholders": {
 			"link_end": {
 				"content": "</a>"
@@ -225,7 +225,7 @@
 		"message": "Inbäddad"
 	},
 	"enableHighlighterDescription": {
-		"message": "Markera innehåll på webbsidor som du kan spara till Obsidian."
+		"message": "Markera innehåll på webbsidor som du kan spara till Molio."
 	},
 	"enableInterpreter": {
 		"message": "Aktivera tolk"
@@ -272,7 +272,7 @@
 		"message": "Exportera egenskaper"
 	},
 	"exportPropertiesDescription": {
-		"message": "Spara Web Clipper-egenskaper till en $strong_start$types.json$strong_end$-fil som kan importeras till ditt Obsidian-valv eller till Web Clipper på andra enheter.",
+		"message": "Spara Web Clipper-egenskaper till en $strong_start$types.json$strong_end$-fil som kan importeras till ditt Molio-valv eller till Web Clipper på andra enheter.",
 		"placeholders": {
 			"strong_end": {
 				"content": "</strong>"
@@ -283,10 +283,10 @@
 		}
 	},
 	"extensionDescription": {
-		"message": "Spara innehåll från webben i ett privat och hållbart format som du kan komma åt offline. Den officiella webbläsartillägget för Obsidian."
+		"message": "Spara innehåll från webben i ett privat och hållbart format som du kan komma åt offline. Den officiella webbläsartillägget för Molio."
 	},
 	"extensionName": {
-		"message": "Obsidian Web Clipper"
+		"message": "Molio Web Clipper"
 	},
 	"failedToCopyText": {
 		"message": "Det gick inte att kopiera texten"
@@ -409,7 +409,7 @@
 		"message": "Importera egenskaper"
 	},
 	"importPropertiesDescription": {
-		"message": "För att importera dina egenskaper från Obsidian, hitta $strong_1_start$types.json$strong_1_end$-filen i mappen $strong_2_start$.obsidian$strong_2_end$ i ditt valv. Observera att denna mapp är dold som standard på de flesta operativsystem.",
+		"message": "För att importera dina egenskaper från Molio, hitta $strong_1_start$types.json$strong_1_end$-filen i mappen $strong_2_start$.obsidian$strong_2_end$ i ditt valv. Observera att denna mapp är dold som standard på de flesta operativsystem.",
 		"placeholders": {
 			"strong_1_end": {
 				"content": "</strong>"
@@ -467,7 +467,7 @@
 		"message": "Äldre läge"
 	},
 	"legacyModeDescription": {
-		"message": "Använder URI-klippmetoden som är kompatibel med Obsidian 1.6.7 eller tidigare. Observera att längden på innehållet du kan klippa är begränsad av din webbläsare och operativsystem. Vissa sidor kan misslyckas utan felmeddelanden."
+		"message": "Använder URI-klippmetoden som är kompatibel med Molio 1.6.7 eller tidigare. Observera att längden på innehållet du kan klippa är begränsad av din webbläsare och operativsystem. Vissa sidor kan misslyckas utan felmeddelanden."
 	},
 	"loadArticle": {
 		"message": "Läs artikel"
@@ -961,7 +961,7 @@
 		"message": "Spara klippt anteckning utan att öppna den"
 	},
 	"silentOpenDescription": {
-		"message": "Klippta anteckningar kommer att sparas men inte öppnas som en ny flik. Obsidian kommer fortfarande att flyttas till förgrunden."
+		"message": "Klippta anteckningar kommer att sparas men inte öppnas som en ny flik. Molio kommer fortfarande att flyttas till förgrunden."
 	},
 	"sort": {
 		"message": "Sortera"
@@ -1056,7 +1056,7 @@
 		"message": "Valv"
 	},
 	"vaultsDescription": {
-		"message": "Som standard sparas klippta anteckningar i det för närvarande öppna valvet. Du kan lägga till valv här om du vill ha möjlighet att spara i olika valv. Valvnamn måste exakt matcha namnet på Obsidian-valvet. Tryck $strong_start$retur$strong_end$ för att lägga till ett valv.",
+		"message": "Som standard sparas klippta anteckningar i det för närvarande öppna valvet. Du kan lägga till valv här om du vill ha möjlighet att spara i olika valv. Valvnamn måste exakt matcha namnet på Molio-valvet. Tryck $strong_start$retur$strong_end$ för att lägga till ett valv.",
 		"placeholders": {
 			"strong_end": {
 				"content": "</strong>"
