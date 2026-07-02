@@ -19,12 +19,19 @@ export async function generateFrontmatter(properties: Property[]): Promise<strin
 // whichever vault the user has open in Molio right now — so clips always land
 // where the user is looking, with zero configuration.
 //
-// Requires the Molio daemon (default http://localhost:3100) to be running and
-// at least one knowledge base to exist. The daemon auto-creates parent
-// directories when writing files, and its VaultWatcher picks up the landed
-// file so the Molio UI refreshes without a manual refocus.
+// If Molio isn't running, the clipper triggers molio://launch first: the OS
+// protocol handler boots the Molio desktop app, which spawns the daemon on
+// localhost:3100 as part of its startup. This mirrors the original obsidian://
+// behavior, where triggering the protocol auto-launched Obsidian — no manual
+// start required. We then poll /api/health until the daemon is ready before
+// saving. The daemon auto-creates parent directories when writing files, and
+// its VaultWatcher picks up the landed file so the Molio UI refreshes without
+// a manual refocus.
 
 const DEFAULT_DAEMON_URL = 'http://localhost:3100';
+const HEALTH_PROBE_TIMEOUT_MS = 2000;
+const LAUNCH_POLL_INTERVAL_MS = 500;
+const LAUNCH_POLL_TIMEOUT_MS = 30000;
 
 interface ActiveVaultResponse {
 	vaultId: string | null;
@@ -51,6 +58,63 @@ function todayDateStamp(): string {
 	const mm = String(d.getMonth() + 1).padStart(2, '0');
 	const dd = String(d.getDate()).padStart(2, '0');
 	return `${yyyy}-${mm}-${dd}`;
+}
+
+/**
+ * Probe whether the Molio daemon is accepting requests.
+ * Uses a short timeout so a dead port fails fast rather than stalling.
+ */
+async function isDaemonHealthy(): Promise<boolean> {
+	try {
+		const controller = new AbortController();
+		const timer = setTimeout(() => controller.abort(), HEALTH_PROBE_TIMEOUT_MS);
+		const res = await fetch(`${DEFAULT_DAEMON_URL}/api/health`, { signal: controller.signal });
+		clearTimeout(timer);
+		return res.ok;
+	} catch {
+		return false;
+	}
+}
+
+/**
+ * Make sure the Molio daemon is up and reachable before we try to save.
+ *
+ * If the daemon is already healthy, returns immediately (the common path —
+ * Molio is open and the user is clipping into it).
+ *
+ * If it isn't, triggers molio://launch via the background script. The OS
+ * protocol handler then boots the Molio desktop app (just like the original
+ * obsidian:// flow launched Obsidian), and the app spawns the daemon on
+ * localhost:3100 as it starts. We then poll /api/health until the daemon is
+ * ready or we time out.
+ *
+ * Note: the first-ever molio:// trigger shows Chrome's "Open Molio?" dialog;
+ * once the user checks "always allow", subsequent triggers are silent and the
+ * daemon is typically ready within ~1–2s.
+ */
+async function ensureMolioDaemonReady(): Promise<void> {
+	if (await isDaemonHealthy()) return;
+
+	// Daemon down — trigger the protocol handler to launch Molio.
+	try {
+		await browser.runtime.sendMessage({
+			action: 'openMolioProtocolUrl',
+			url: 'molio://launch',
+		});
+	} catch (err) {
+		console.warn('[molio] failed to trigger molio://launch (will retry health poll anyway):', err);
+	}
+
+	const deadline = Date.now() + LAUNCH_POLL_TIMEOUT_MS;
+	while (Date.now() < deadline) {
+		await new Promise((resolve) => setTimeout(resolve, LAUNCH_POLL_INTERVAL_MS));
+		if (await isDaemonHealthy()) return;
+	}
+
+	throw new Error(
+		`Molio didn't start within ${LAUNCH_POLL_TIMEOUT_MS / 1000}s. ` +
+		`Please launch Molio manually, then try clipping again.`
+	);
 }
 
 /**
@@ -167,6 +231,11 @@ export async function saveToObsidian(
 		}
 		relPath = `${path}${formattedNoteName}.md`;
 	}
+
+	// Make sure the Molio daemon is up before we resolve a vault / write.
+	// If Molio isn't running, this auto-launches it (molio://launch) and waits
+	// for the daemon to come up — mirroring how obsidian:// auto-launched Obsidian.
+	await ensureMolioDaemonReady();
 
 	const vaultId = await resolveTargetVaultId();
 
