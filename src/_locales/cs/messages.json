@@ -118,7 +118,7 @@
 		"message": "Zavřít"
 	},
 	"commandOpenClipper": {
-		"message": "Otevřít Molio Clipper"
+		"message": "Otevřít Molio-Connect"
 	},
 	"commandQuickClip": {
 		"message": "Rychlé zachycení"
@@ -286,7 +286,7 @@
 		"message": "Uložte obsah z webu v soukromém a trvalém formátu, ke kterému máte přístup offline. Oficiální prohlížečové rozšíření pro Molio."
 	},
 	"extensionName": {
-		"message": "Molio Web Clipper"
+		"message": "Molio-Connect"
 	},
 	"failedToCopyText": {
 		"message": "Nepodařilo se zkopírovat text"

@@ -1,9 +1,9 @@
 {
 	"manifest_version": 3,
 	"default_locale": "en",
-	"name": "Molio",
+	"name": "Molio-Connect",
 	"version": "0.3.0",
-	"description": "Molio Web Clipper — save and highlight web pages into your Molio knowledge base.",
+	"description": "Molio-Connect — save and highlight web pages into your Molio knowledge base.",
 	"permissions": [
 		"activeTab",
 		"clipboardWrite",

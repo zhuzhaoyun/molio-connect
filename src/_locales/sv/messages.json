@@ -118,7 +118,7 @@
 		"message": "Stäng"
 	},
 	"commandOpenClipper": {
-		"message": "Öppna Molio Clipper"
+		"message": "Öppna Molio-Connect"
 	},
 	"commandQuickClip": {
 		"message": "Snabbklipp"
@@ -286,7 +286,7 @@
 		"message": "Spara innehåll från webben i ett privat och hållbart format som du kan komma åt offline. Den officiella webbläsartillägget för Molio."
 	},
 	"extensionName": {
-		"message": "Molio Web Clipper"
+		"message": "Molio-Connect"
 	},
 	"failedToCopyText": {
 		"message": "Det gick inte att kopiera texten"

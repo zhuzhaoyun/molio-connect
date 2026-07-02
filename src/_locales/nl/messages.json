@@ -118,7 +118,7 @@
 		"message": "Sluiten"
 	},
 	"commandOpenClipper": {
-		"message": "Open Molio Clipper"
+		"message": "Open Molio-Connect"
 	},
 	"commandQuickClip": {
 		"message": "Snel knippen"
@@ -286,7 +286,7 @@
 		"message": "Sla webinhoud op in een privé en duurzaam formaat dat je offline kunt bekijken. De officiële browserextensie voor Molio."
 	},
 	"extensionName": {
-		"message": "Molio Web Clipper"
+		"message": "Molio-Connect"
 	},
 	"failedToCopyText": {
 		"message": "Tekst kopiëren mislukt"

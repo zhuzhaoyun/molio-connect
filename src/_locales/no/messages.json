@@ -118,7 +118,7 @@
 		"message": "Lukk"
 	},
 	"commandOpenClipper": {
-		"message": "Åpne Molio Clipper"
+		"message": "Åpne Molio-Connect"
 	},
 	"commandQuickClip": {
 		"message": "Hurtigklipp"
@@ -286,7 +286,7 @@
 		"message": "Lagre webinnhold i et privat og varig format som kan nås offline. Den offisielle nettleserutvidelsen for Molio."
 	},
 	"extensionName": {
-		"message": "Molio Web Clipper"
+		"message": "Molio-Connect"
 	},
 	"failedToCopyText": {
 		"message": "Kunne ikke kopiere tekst"

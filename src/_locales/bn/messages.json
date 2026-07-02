@@ -118,7 +118,7 @@
 		"message": "বন্ধ করুন"
 	},
 	"commandOpenClipper": {
-		"message": "Molio Clipper খুলুন"
+		"message": "Molio-Connect খুলুন"
 	},
 	"commandQuickClip": {
 		"message": "দ্রুত ক্লিপ করুন"
@@ -286,7 +286,7 @@
 		"message": "ওয়েব থেকে বিষয়বস্তু একটি ব্যক্তিগত এবং স্থায়ী ফর্ম্যাটে সংরক্ষণ করুন যা আপনি অফলাইনে অ্যাক্সেস করতে পারেন। Molio এর জন্য অফিসিয়াল ব্রাউজার এক্সটেনশান।"
 	},
 	"extensionName": {
-		"message": "Molio Web Clipper"
+		"message": "Molio-Connect"
 	},
 	"failedToCopyText": {
 		"message": "টেক্সট কপি করতে ব্যর্থ হয়েছে"

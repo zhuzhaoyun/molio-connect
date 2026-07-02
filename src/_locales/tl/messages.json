@@ -118,7 +118,7 @@
 		"message": "Isara"
 	},
 	"commandOpenClipper": {
-		"message": "Buksan ang Molio Clipper"
+		"message": "Buksan ang Molio-Connect"
 	},
 	"commandQuickClip": {
 		"message": "Quick clip"
@@ -286,7 +286,7 @@
 		"message": "I-save ang web content sa pribado at pangmatagalang format, na maaaring ma-access offline. Ang opisyal na browser extension para sa Molio."
 	},
 	"extensionName": {
-		"message": "Molio Web Clipper"
+		"message": "Molio-Connect"
 	},
 	"failedToCopyText": {
 		"message": "Hindi makopya ang text"

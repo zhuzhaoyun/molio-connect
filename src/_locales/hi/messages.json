@@ -118,7 +118,7 @@
 		"message": "Band karein"
 	},
 	"commandOpenClipper": {
-		"message": "Molio Clipper kholein"
+		"message": "Molio-Connect kholein"
 	},
 	"commandQuickClip": {
 		"message": "Quick clip"
@@ -286,7 +286,7 @@
 		"message": "Web se content ko ek private aur durable format mein save karein jise aap offline access kar sakte hain. Molio ka official browser extension."
 	},
 	"extensionName": {
-		"message": "Molio Web Clipper"
+		"message": "Molio-Connect"
 	},
 	"failedToCopyText": {
 		"message": "Text copy karne mein fail"

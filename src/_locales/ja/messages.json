@@ -118,7 +118,7 @@
 		"message": "閉じる"
 	},
 	"commandOpenClipper": {
-		"message": "Molio Clipperを開く"
+		"message": "Molio-Connectを開く"
 	},
 	"commandQuickClip": {
 		"message": "クイッククリップ"
@@ -286,7 +286,7 @@
 		"message": "Webコンテンツをプライベートで永続的なオフラインアクセス可能な形式で保存します。Molioの公式ブラウザ拡張機能です。"
 	},
 	"extensionName": {
-		"message": "Molio Web Clipper"
+		"message": "Molio-Connect"
 	},
 	"failedToCopyText": {
 		"message": "テキストのコピーに失敗しました"

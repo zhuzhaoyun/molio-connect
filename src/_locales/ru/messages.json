@@ -118,7 +118,7 @@
 		"message": "Закрыть"
 	},
 	"commandOpenClipper": {
-		"message": "Открыть Molio Clipper"
+		"message": "Открыть Molio-Connect"
 	},
 	"commandQuickClip": {
 		"message": "Быстрое сохранение"
@@ -286,7 +286,7 @@
 		"message": "Сохраняйте содержимое веб-страниц в конфиденциальном и долговременном формате, к которому можно получить доступ в автономном режиме. Официальное расширение для браузера Molio."
 	},
 	"extensionName": {
-		"message": "Molio Web Clipper"
+		"message": "Molio-Connect"
 	},
 	"failedToCopyText": {
 		"message": "Не удалось скопировать текст"

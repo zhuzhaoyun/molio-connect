@@ -118,7 +118,7 @@
 		"message": "Fermer"
 	},
 	"commandOpenClipper": {
-		"message": "Ouvrir Molio Clipper"
+		"message": "Ouvrir Molio-Connect"
 	},
 	"commandQuickClip": {
 		"message": "Enregistrement rapide"
@@ -286,7 +286,7 @@
 		"message": "Sauvegardez du contenu web dans un format privé et durable accessible hors ligne. L'extension officielle pour Molio."
 	},
 	"extensionName": {
-		"message": "Molio Web Clipper"
+		"message": "Molio-Connect"
 	},
 	"failedToCopyText": {
 		"message": "Échec de la copie du texte"

@@ -118,7 +118,7 @@
 		"message": "Tutup"
 	},
 	"commandOpenClipper": {
-		"message": "Buka Molio Clipper"
+		"message": "Buka Molio-Connect"
 	},
 	"commandQuickClip": {
 		"message": "Klip cepat"
@@ -286,7 +286,7 @@
 		"message": "Simpan konten dari web dalam format yang bersifat privat dan tahan lama dan dapat diakses secara offline. Ekstensi browser resmi untuk Molio."
 	},
 	"extensionName": {
-		"message": "Molio Web Clipper"
+		"message": "Molio-Connect"
 	},
 	"failedToCopyText": {
 		"message": "Gagal menyalin teks"

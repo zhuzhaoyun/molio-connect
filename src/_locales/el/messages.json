@@ -118,7 +118,7 @@
 		"message": "Κλείσιμο"
 	},
 	"commandOpenClipper": {
-		"message": "Άνοιγμα Molio Clipper"
+		"message": "Άνοιγμα Molio-Connect"
 	},
 	"commandQuickClip": {
 		"message": "Γρήγορη αποκοπή"
@@ -286,7 +286,7 @@
 		"message": "Αποθηκεύστε περιεχόμενο από τον ιστό σε ιδιωτική και βιώσιμη μορφή στην οποία έχετε πρόσβαση εκτός σύνδεσης. Η επίσημη επέκταση περιηγητή για το Molio."
 	},
 	"extensionName": {
-		"message": "Molio Web Clipper"
+		"message": "Molio-Connect"
 	},
 	"failedToCopyText": {
 		"message": "Αποτυχία αντιγραφής κειμένου"

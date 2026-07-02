@@ -118,7 +118,7 @@
 		"message": "Sulje"
 	},
 	"commandOpenClipper": {
-		"message": "Avaa Molio Clipper"
+		"message": "Avaa Molio-Connect"
 	},
 	"commandQuickClip": {
 		"message": "Pikaleikkaus"
@@ -286,7 +286,7 @@
 		"message": "Tallenna verkkosisältöä yksityisessä ja kestävässä muodossa, jota voit käyttää offline-tilassa. Molioin virallinen selainlaajennus."
 	},
 	"extensionName": {
-		"message": "Molio Web Clipper"
+		"message": "Molio-Connect"
 	},
 	"failedToCopyText": {
 		"message": "Tekstin kopiointi epäonnistui"

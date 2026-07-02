@@ -118,7 +118,7 @@
 		"message": "닫기"
 	},
 	"commandOpenClipper": {
-		"message": "Molio Clipper 열기"
+		"message": "Molio-Connect 열기"
 	},
 	"commandQuickClip": {
 		"message": "퀵 클립"
@@ -286,7 +286,7 @@
 		"message": "웹 콘텐츠를 저장하여 오프라인에서도 접근할 수 있는 개인적이고 내구성 있는 형식으로 보관하세요. Molio의 공식 브라우저 확장 프로그램입니다."
 	},
 	"extensionName": {
-		"message": "Molio Web Clipper"
+		"message": "Molio-Connect"
 	},
 	"failedToCopyText": {
 		"message": "텍스트를 복사하지 못했습니다"

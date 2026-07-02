@@ -118,7 +118,7 @@
 		"message": "Закрити"
 	},
 	"commandOpenClipper": {
-		"message": "Відкрити Molio Clipper"
+		"message": "Відкрити Molio-Connect"
 	},
 	"commandQuickClip": {
 		"message": "Швидке вирізання"
@@ -286,7 +286,7 @@
 		"message": "Зберігайте веб-вміст у приватному та довговічному форматі, доступному офлайн. Офіційне браузерне розширення для Molio."
 	},
 	"extensionName": {
-		"message": "Molio Web Clipper"
+		"message": "Molio-Connect"
 	},
 	"failedToCopyText": {
 		"message": "Не вдалося скопіювати текст"

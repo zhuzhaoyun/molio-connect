@@ -118,7 +118,7 @@
 		"message": "Închide"
 	},
 	"commandOpenClipper": {
-		"message": "Deschide Molio Clipper"
+		"message": "Deschide Molio-Connect"
 	},
 	"commandQuickClip": {
 		"message": "Decupare rapidă"
@@ -286,7 +286,7 @@
 		"message": "Salvează conținut web într-un format privat și durabil care poate fi accesat offline. Extensia oficială de browser pentru Molio."
 	},
 	"extensionName": {
-		"message": "Molio Web Clipper"
+		"message": "Molio-Connect"
 	},
 	"failedToCopyText": {
 		"message": "Nu s-a putut copia textul"

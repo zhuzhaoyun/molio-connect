@@ -118,7 +118,7 @@
 		"message": "Tancar"
 	},
 	"commandOpenClipper": {
-		"message": "Obrir Molio Clipper"
+		"message": "Obrir Molio-Connect"
 	},
 	"commandQuickClip": {
 		"message": "Guardat ràpid"
@@ -286,7 +286,7 @@
 		"message": "Guardar contingut web en un format privat i durador al qual pot accedir sense connexió. L'extensió oficial per a Molio."
 	},
 	"extensionName": {
-		"message": "Molio Web Clipper"
+		"message": "Molio-Connect"
 	},
 	"failedToCopyText": {
 		"message": "Error en copiar el text"

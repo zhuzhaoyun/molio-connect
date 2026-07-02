@@ -118,7 +118,7 @@
 		"message": "關閉"
 	},
 	"commandOpenClipper": {
-		"message": "開啟 Molio Clipper"
+		"message": "開啟 Molio-Connect"
 	},
 	"commandQuickClip": {
 		"message": "快速擷取"

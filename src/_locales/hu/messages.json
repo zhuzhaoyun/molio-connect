@@ -118,7 +118,7 @@
 		"message": "Bezárás"
 	},
 	"commandOpenClipper": {
-		"message": "Molio Clipper megnyitása"
+		"message": "Molio-Connect megnyitása"
 	},
 	"commandQuickClip": {
 		"message": "Gyors klip"
@@ -286,7 +286,7 @@
 		"message": "Ments tartalmat a webről privát és tartós formátumban, amelyet offline is elérhetsz. Az Molio hivatalos böngészőbővítménye."
 	},
 	"extensionName": {
-		"message": "Molio Web Clipper"
+		"message": "Molio-Connect"
 	},
 	"failedToCopyText": {
 		"message": "Nem sikerült a szöveg másolása"
