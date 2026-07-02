@@ -1,8 +1,8 @@
 {
 	"manifest_version": 3,
 	"default_locale": "en",
-	"name": "Molio-Connect",
-	"version": "0.3.0",
+	"name": "Molio",
+	"version": "0.3.1",
 	"description": "Molio-Connect — save and highlight web pages into your Molio knowledge base.",
 	"permissions": [
 		"activeTab",

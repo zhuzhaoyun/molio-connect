@@ -286,7 +286,7 @@
 		"message": "Lagre webinnhold i et privat og varig format som kan nås offline. Den offisielle nettleserutvidelsen for Molio."
 	},
 	"extensionName": {
-		"message": "Molio-Connect"
+		"message": "Molio"
 	},
 	"failedToCopyText": {
 		"message": "Kunne ikke kopiere tekst"

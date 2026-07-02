@@ -286,7 +286,7 @@
 		"message": "Webコンテンツをプライベートで永続的なオフラインアクセス可能な形式で保存します。Molioの公式ブラウザ拡張機能です。"
 	},
 	"extensionName": {
-		"message": "Molio-Connect"
+		"message": "Molio"
 	},
 	"failedToCopyText": {
 		"message": "テキストのコピーに失敗しました"

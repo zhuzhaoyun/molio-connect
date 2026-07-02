@@ -286,7 +286,7 @@
 		"message": "Web se content ko ek private aur durable format mein save karein jise aap offline access kar sakte hain. Molio ka official browser extension."
 	},
 	"extensionName": {
-		"message": "Molio-Connect"
+		"message": "Molio"
 	},
 	"failedToCopyText": {
 		"message": "Text copy karne mein fail"

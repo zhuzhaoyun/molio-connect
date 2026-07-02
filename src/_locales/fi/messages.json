@@ -286,7 +286,7 @@
 		"message": "Tallenna verkkosisältöä yksityisessä ja kestävässä muodossa, jota voit käyttää offline-tilassa. Molioin virallinen selainlaajennus."
 	},
 	"extensionName": {
-		"message": "Molio-Connect"
+		"message": "Molio"
 	},
 	"failedToCopyText": {
 		"message": "Tekstin kopiointi epäonnistui"

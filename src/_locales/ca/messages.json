@@ -286,7 +286,7 @@
 		"message": "Guardar contingut web en un format privat i durador al qual pot accedir sense connexió. L'extensió oficial per a Molio."
 	},
 	"extensionName": {
-		"message": "Molio-Connect"
+		"message": "Molio"
 	},
 	"failedToCopyText": {
 		"message": "Error en copiar el text"
