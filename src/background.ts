@@ -725,12 +725,49 @@ browser.runtime.onMessage.addListener((request: unknown, sender: browser.Runtime
 			}
 		}
 
+		if (typedRequest.action === "openMolioProtocolUrl") {
+			// Trigger the molio:// OS protocol handler to bring the Molio desktop
+			// app to the front and open the just-saved file. We navigate the active
+			// tab to the molio:// URL (same as the upstream openObsidianUrl flow for
+			// obsidian://): Chrome intercepts the external-protocol navigation,
+			// shows the "Open Molio?" dialog once, and — because this fires from the
+			// extension's own origin, not the clipped page's — a single "always
+			// allow" checkbox suppresses all future prompts regardless of site.
+			const url = (typedRequest as any).url;
+			if (!url) {
+				sendResponse({ success: false, error: 'Missing URL' });
+				return true;
+			}
+			// Listener is synchronous, so run the async work in an IIFE and keep
+			// the message channel open (return true) until sendResponse fires.
+			(async () => {
+				try {
+					const tabs = await browser.tabs.query({ active: true, currentWindow: true });
+					const tab = tabs[0];
+					if (tab?.id) {
+						await browser.tabs.update(tab.id, { url });
+					}
+					sendResponse({ success: true });
+				} catch (error) {
+					// Non-fatal: the clip is already saved. A failure here only means
+					// Molio doesn't auto-focus.
+					console.warn('[molio] failed to trigger molio:// protocol:', error);
+					sendResponse({
+						success: false,
+						error: error instanceof Error ? error.message : String(error),
+					});
+				}
+			})();
+			return true;
+		}
+
 		// For other actions that use sendResponse
 		if (typedRequest.action === "extractContent" ||
 			typedRequest.action === "ensureContentScriptLoaded" ||
 			typedRequest.action === "getHighlighterMode" ||
 			typedRequest.action === "toggleHighlighterMode" ||
-			typedRequest.action === "openObsidianUrl") {
+			typedRequest.action === "openObsidianUrl" ||
+			typedRequest.action === "openMolioProtocolUrl") {
 			return true;
 		}
 	}
